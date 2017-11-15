@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vue js Example </title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+	<div class="container" id="app">
+		<!-- <button class="button" style="display:block;margin:auto;" @click="getDataViaREST">Get posts via REST</button> -->
+
+		<!-- Filter: <input type="text" name="" value="" placeholder="" ng-model="search"> -->
+
+		<ul class="items">
+			<li v-for="food in items" v-if='!food.length' v-on:click="toggleInfo(food)">
+				<div class="food_item">
+					<div class="image">
+						<ul class="user_review">
+							<li> 101 Likes</li>
+							<li> 50 Discuss</li>
+						</ul>
+						<img v-bind:src="food.food_image" :alt="food.name" />
+					</div>
+					<div class="author clearfix">
+						<img v-bind:src="food.user_image" alt="profile" class="profile" />
+						<h1 class="title">{{food.name}}  <cite>  {{food.place}}  </cite></h1>
+					</div>
+					<div class="description">
+						<p>{{food.description}} </p>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+
+		<div class="product_info open" v-bind:class="{'open':showInfo, 'close' : !showInfo}" >
+			<div class="arrow_close" v-on:click="closetoggleInfo()"><img src="img/arrow_close.png" alt="Close"></div>
+			<div class="food_item">
+				<div class="image" id=''>
+					<ul class="user_review">
+						<li> 101 Likes</li>
+						<li> 50 Discuss</li>
+					</ul>
+					<img v-bind:src="selectedFood.food_image" alt='selectedFood.name' />
+				</div>
+				<div class="author clearfix">
+					<img v-bind:src="selectedFood.user_image" alt="profile" class="profile" />
+					<h1 class="title"> {{selectedFood.name}} <cite> {{selectedFood.place}} </cite></h1>
+				</div>
+				<div class="description">
+					<p>{{selectedFood.description}} </p>
+				</div>
+			</div>
+
+		</div>
+		<!-- //.product_info -->
+	</div>
+	<!-- //.#app-->
+	<script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				items: '',
+				showInfo: false,
+				selectedFood: ''
+			},
+			mounted: function() {
+							this.getDataViaREST()
+			},
+			methods: {
+				getDataViaREST: function() {
+					var app = this
+					var url = 'json/user.json';
+					axios.get(url).then(function(response) {
+						app.items = response.data.user;
+						console.log(app.items);
+					});
+				},
+				toggleInfo: function (selectedFood) {
+					this.showInfo = true;
+					this.selectedFood = selectedFood;
+					console.log(selectedFood);
+				},
+				closetoggleInfo: function () {
+					this.showInfo = false
+				}
+			}
+
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+{"user" :[
+    {
+    "id": 1,
+    "name": "Veg Platter",
+    "place": "Bangalore",
+    "user_image": "img/user1.jpg",
+    "food_image":"img/food1.jpg",
+    "description":"A good vegetable platter is a staple of any finger-food based buffet, but how often do you hit a graduation party or a concert reception only to find the same old stale, sorry-looking, dried-out carrot sticks, celery sticks, cucumbers, and if you're lucky, bell pepper strips all sitting listlessly around a tub of store-bought Ranch dressing?"
+    },
+    {
+    "id": 2,
+    "name": "Spaghetti Aglio E Olio",
+    "place": "Mangalore",
+    "user_image": "img/user2.jpg",
+    "food_image":"img/food2.jpg",
+    "description":"Aglio e olio is a simple classic Italian pasta sauce of garlic and oil where the true flavour and texture of the pasta really comes through. Our Splendido pasta is made with 100% durum wheat and cut the traditional way with bronze dies - you can taste the difference!"
+    },
+    {
+    "id": 3,
+    "name": "Vegetable Delight",
+    "place": "Bangalore",
+    "user_image": "img/user3.jpg",
+    "food_image":"img/food3.jpg",
+    "description":"This is a great dish when you have all those extra summer vegetables on hand. Add some chicken if you like to make it a main dish, and serve over rice. The secret is to use all fresh vegetables."
+    },
+    {
+    "id": 4,
+    "name": "Macaroni Salad",
+    "place": "Mumbai",
+    "user_image": "img/user4.jpg",
+    "food_image":"img/food4.jpg",
+    "description":"Pasta salad provides endless possibilities for new flavor combinations and ingredients. Here are some of our favorite quick and easy pasta salad recipes."
+    },
+    {
+    "id": 5,
+    "name": "Penne Stagioni",
+    "place": "Bangalore",
+    "user_image": "img/user5.jpg",
+    "food_image":"img/food5.jpg",
+    "description":"Penne Stagioni Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 6,
+    "name": "Vegetable Delight",
+    "place": "Mangalore",
+    "user_image": "img/user6.jpg",
+    "food_image":"img/food6.jpg",
+    "description":"This is a great dish when you have all those extra summer vegetables on hand. Add some chicken if you like to make it a main dish, and serve over rice. The secret is to use all fresh vegetables."
+    },
+    {
+    "id": 7,
+    "name": "Chicken Lasagne",
+    "place": "Mumbai",
+    "user_image": "img/user7.jpg",
+    "food_image":"img/food7.jpg",
+    "description":"Chicken Lasagne Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 8,
+    "name": "Vegetable Delight",
+    "place": "Bangalore",
+    "user_image": "img/user8.jpg",
+    "food_image":"img/food8.jpg",
+    "description":"This is a great dish when you have all those extra summer vegetables on hand. Add some chicken if you like to make it a main dish, and serve over rice. The secret is to use all fresh vegetables."
+    },
+    {
+    "id": 9,
+    "name": "Vegetable test1",
+    "place": "Mangalore",
+    "user_image": "img/user9.jpg",
+    "food_image":"img/food9.jpg",
+    "description":"Vegetable test1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    },
+    {
+    "id": 10,
+    "name": "Vegetable test2",
+    "place": "Mumbai",
+    "user_image": "img/user4.jpg",
+    "food_image":"img/food10.jpg",
+    "description":"Vegetable test2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+    }
+] }
