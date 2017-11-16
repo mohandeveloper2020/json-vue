@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Times of india feeds</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/movies.css">
+</head>
+
+<body>
+  <div class="container" id="movies_list">
+
+    <div class="mb-3">
+      <div class="card">
+        <h4 class="card-header bg-transparent"><strong>Movies </strong> | Currently Showing</h4>
+        <div class="card-body">
+
+          <div class="" v-for="movie in movies">
+            <div class="movie_list border d-flex justify-content-start">
+              <div class="poster">
+                <img class="poster-img" :src="movie.poster_path" :alt="movie.title" />
+                <p>Votes: 121,501 </p>
+              </div>
+
+              <div class="body_content">
+                <h4 class="title"><a href="#">{{movie.title}} </a> <span>8.2</span></h4>
+                <!-- <p class="text-muted">PG-13 | 130 min | Action, Adventure, Comedy</p> -->
+
+                <p class="disc">{{movie.overview}} </p>
+                <!-- <p>Director: <a href="#">Taika Waititi</a> | Stars: <a href="#">Chris Hemsworth</a>, <a href="#">Tom Hiddleston</a>, <a href="#">Cate Blanchett</a>, <a href="#">Mark Ruffalo</a></p> -->
+
+              </div>
+            </div>
+            <!-- //.movie_list end  -->
+          </div>
+          <!-- //.foor loop end here  -->
+        </div>
+        <!-- //.card-body -->
+      </div>
+      <!-- //.card end  -->
+    </div>
+    <!-- //#movies -->
+
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+  var app = new Vue({
+    el: '#movies_list',
+    data: {
+      movies: '',
+      movie: '',
+      count:''
+    },
+    mounted: function() {
+      this.getMovies()
+    },
+    methods: {
+      getMovies: function() {
+        var app = this
+        var url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=8bcc04e0b0ee249e8ec45d47e59cc0f4&language=en-US&page=3'
+        axios.get(url).then(function(response) {
+          app.movies = response.data.results
+          app.count = response.data.results.length
+          console.log(app.movies);
+        })
+      }
+    }
+  })
+</script>
+
+</html>
