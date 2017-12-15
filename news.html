@@ -89,18 +89,18 @@
       country: 'in',
       sortBy: 'top'
     },
-    mounted: function() {
+    created: function() {
       this.getTimeofIndiaNews()
     },
     methods: {
       getTimeofIndiaNews: function() {
         var app = this
-        var path = ''
+      //  var path = 'https://newsapi.org/v1/articles?source=the-times-of-india&apiKey=cdee0983984247c092ea2429e04c00f9'
         var url = 'https://newsapi.org/v1/articles?source=' + app.times_of_india + '&sortBy=' + app.sortBy + '&country=' + app.country + '&apiKey=' + app.apiKey
 
         axios.get(url).then(function(response) {
           app.articles = response.data.articles
-          console.log(response.data.articles);
+          console.log(response);
         })
       }
     }
@@ -118,7 +118,7 @@
     },
 
 
-    mounted: function() {
+    created: function() {
       this.getTheHinduNews()
     },
     methods: {
